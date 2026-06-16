@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NavSec</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ===== Cabecalho ===== -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true">
+          <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1 1 4v8c0 6 4.5 9.5 10 11 5.5-1.5 10-5 10-11V4L11 1Z" fill="#ffffff"/>
+            <text x="11" y="15" text-anchor="middle" font-family="Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" fill="#2c5282">N</text>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong class="brand__name">NavSec</strong>
+          <span class="brand__sub" id="header-subtitle">Analise da pagina atual</span>
+        </span>
+      </div>
+
+      <button class="btn-pdf" id="btn-pdf" type="button" title="Baixar relatorio em PDF">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 3v10m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>PDF</span>
+      </button>
+    </header>
+
+    <!-- ===== Palco com navegacao lateral ===== -->
+    <div class="stage">
+      <button class="nav-chevron nav-chevron--prev" id="nav-prev" type="button" aria-label="Tela anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <main class="content-area" id="content-area" aria-live="polite"></main>
+
+      <button class="nav-chevron nav-chevron--next" id="nav-next" type="button" aria-label="Proxima tela">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- ===== Rodape com indicadores ===== -->
+    <footer class="app-footer">
+      <span class="dots" id="nav-dots"></span>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
